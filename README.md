@@ -6,7 +6,7 @@ Appointment Scheduler App is a simple Angular-based application that allows user
 
 - Schedule Appointments
 - View Appointments
-- User friendly UI**
+- User-friendly UI
 - Dialog for Creating Appointments
 
 ## Screenshots
