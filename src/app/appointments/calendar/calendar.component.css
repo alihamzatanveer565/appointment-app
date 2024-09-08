@@ -1,0 +1,65 @@
+.appointment {
+    cursor: move;
+}
+
+.date-navigator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.date-display {
+    font-size: 1.2rem;
+}
+
+.container {
+    padding: 16px;
+}
+
+.appointment {
+    cursor: pointer;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.booked-appointment {
+    background-color: #7b88d1;
+    color: white;
+    padding: 5px;
+    border-radius: 8px;
+    flex: 1;
+    cursor: grab;
+}
+
+.delete {
+    display: none;
+    border-radius: 8px;
+    color: white;
+    padding: 5px 15px;
+    background-color: red;
+    color: move;
+}
+
+.appointment:hover .delete {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cdk-drag-preview {
+    background-color: #e0e0e0;
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 8px;
+    height: fit-content;
+}
+
+.cdk-drag-placeholder {
+    background-color: #f0f0f0;
+    border: 1px dashed #ccc;
+    padding: 5px;
+    border-radius: 8px;
+    height: fit-content;
+}

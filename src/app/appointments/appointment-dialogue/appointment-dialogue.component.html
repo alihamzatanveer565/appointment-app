@@ -1,0 +1,22 @@
+<div class="card">
+  <div class="dialog-header">
+    <h1 mat-dialog-title>Appointment for {{ data.hour }}</h1>
+    <button mat-icon-button (click)="dialogRef.close()" aria-label="Close">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+  <form [formGroup]="form" class="form">
+    <mat-form-field appearance="fill">
+      <mat-label>Title</mat-label>
+      <input matInput formControlName="title">
+      <mat-error *ngIf="form.get('title')?.hasError('required')">
+        Title is required
+      </mat-error>
+    </mat-form-field>
+  </form>
+  <div mat-dialog-actions class="buttons">
+    <button mat-button (click)="dialogRef.close()">Close</button>
+    <button mat-raised-button color="primary" (click)="onSubmit()">Save</button>
+  </div>
+</div>
+  

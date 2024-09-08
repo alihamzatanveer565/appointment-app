@@ -1,0 +1,39 @@
+<mat-toolbar color="primary">
+  <mat-icon style="margin-right: 4px;">
+    today
+  </mat-icon>
+  <span>Appointments</span>
+  <span style="flex: 1 1 auto;"></span>
+  
+  <div class="date-navigator">
+    <button mat-icon-button (click)="goToPreviousDay()">
+      <mat-icon>keyboard_arrow_left</mat-icon>
+    </button>
+
+    <div class="date-display">
+      {{ currentMonth }} {{ currentDay }}, {{ currentYear }}
+    </div>
+
+    <button mat-icon-button (click)="goToNextDay()">
+      <mat-icon>keyboard_arrow_right</mat-icon>
+    </button>
+  </div>
+  <span style="flex: 1 1 auto;"></span>
+</mat-toolbar>
+
+<div class="container" cdkDropList>
+  <mat-list>
+    <mat-list-item *ngFor="let data of hours" (mouseover)="onMouseOver(data.hour)" (click)="addAppointment(data.hour)" cdkDropList style="border-bottom: 1px solid #737373;">
+      <div class="appointment">
+        <span style="cursor: pointer; color: #737373;">
+          {{ data.hour }}
+        </span>
+        <div class="booked-appointment" *ngIf="data.appointment" cdkDrag cdkDragBoundary=".calendar-container"
+          (cdkDragEnded)="onDragEnd($event)" (cdkDragStarted)="onDragStart(data.appointment.id)">
+          {{ data.appointment.title }}
+        </div>
+        <div class="delete" *ngIf="data.appointment" (click)="deleteAppointment(data.appointment.id)">Delete</div>
+      </div>
+    </mat-list-item>
+  </mat-list>
+</div>

@@ -1,27 +1,16 @@
-# AppointmentApp
+# Appointment Scheduler App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.14.
+Appointment Scheduler App is a simple Angular-based application that allows users to schedule, manage, and view appointments. The app is built using Angular (v16) and Angular Material, providing a user-friendly interface.
 
-## Development server
+### Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Schedule Appointments
+- View Appointments
+- User friendly UI**
+- Dialog for Creating Appointments
 
-## Code scaffolding
+## Screenshots
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+![Main View](./src/assets/readme/main.png)
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+![Appointment creation dialogue](./src/assets/readme/appointment-dialogue.png)
